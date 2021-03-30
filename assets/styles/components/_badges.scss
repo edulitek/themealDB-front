@@ -1,0 +1,48 @@
+@import './params';
+
+.badge {
+	display: inline-block;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.75rem;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	border: 1px solid transparent;
+	&.badge-default {
+		background-color: lighten($default, 10%);
+		color: darken($default, 50%);
+		border-color: darken($default, 50%);
+	}
+	&.badge-primary {
+		background-color: lighten($primary, 50%);
+		color: $primary;
+		border-color: $primary;
+	}
+	&.badge-yellow {
+		background-color: lighten($yellow, 40%);
+		color: darken($yellow, 5%);
+		border-color: darken($yellow, 5%);
+	}
+	&.badge-orange {
+		background-color: lighten($orange, 40%);
+		color: $orange;
+		border-color: $orange;
+	}
+	&.badge-red {
+		background-color: lighten($red, 40%);
+		color: $red;
+		border-color: $red;
+	}
+	&.badge-purple {
+		background-color: lighten($purple, 50%);
+		color: $purple;
+		border-color: $purple;
+	}
+	&.badge-blue {
+		background-color: lighten($blue, 40%);
+		color: $blue;
+		border-color: $blue;
+	}
+	&.badge-round {
+		border-radius: 1rem;
+	}
+}

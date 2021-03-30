@@ -1,0 +1,175 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './components/badges';
+@import './components/fadeIn';
+
+/* CUSTOM CSS */
+.bg-cover {
+  background-image: url('../images/main_cover.png');
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  filter: blur(6px);
+  -webkit-filter: blur(8px);
+  z-index: -1;
+}
+
+.search-box {
+  font-weight: bold;
+  border: 1px solid $white;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#main {
+  margin-top: calc(#{$navbar-height} + 100px);
+  background-color: $defaultMain;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  #search-result {
+    margin-top: 20px;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  .card {
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .card-body {
+      height: 283px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .meal-name {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 80px;
+      font-size: 40px;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      display: none;
+      cursor: pointer;
+      text-align: center;
+      color: $purple;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+        cursor: pointer;
+      }
+
+      .meal-name {
+        display: block;
+        animation: fadeIn ease 3s;
+        -webkit-animation: fadeIn ease 3s;
+        -moz-animation: fadeIn ease 3s;
+        -o-animation: fadeIn ease 3s;
+        -ms-animation: fadeIn ease 3s;
+      }
+    }
+  }
+}
+
+.nav-message {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  padding: 20px 0;
+  height: $navbar-height;
+  background: $black;
+  top: 0;
+
+  h1 {
+    color: $white;
+    display: inline-block;
+    margin: 0 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: -10px;
+    font-size: 30px;
+  }
+}
+
+.spinner-purple {
+  color: $purple;
+}
+
+#no-data {
+  display: none;
+}
+
+@include media-breakpoint-down(lg) {
+  .meals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .meals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .meals {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $purple $defaultTwoScroll;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $defaultTwoScroll;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $purple;
+  border-radius: 8px;
+  border: 5px solid $defaultTwoScroll;
+}
+
+.fa-youtube {
+  font-size: 16px;
+  color: $colorYoutube;
+}

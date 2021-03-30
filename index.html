@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--  Meta Tags -->
+
+    <!-- CSS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- CSS Library -->
+
+    <!-- My CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- My CSS -->
+
+    <link rel="icon" href="assets/images/brand_icon.png" type="icon" />
+    <title>Recipe's Paradise</title>
+  </head>
+
+  <body>
+    <div class="nav-message">
+      <h1>Meal finder</h1>
+    </div>
+    <div class="bg-cover"></div>
+    <div class="container" id="main">
+      <div class="search-box fade-in">
+        <div class="input-group rounded">
+          <form id="submit" class="w-100">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search your meal..."
+              aria-label="Search"
+              aria-describedby="search-addon"
+              id="search"
+            />
+          </form>
+        </div>
+      </div>
+      <p id="search-result"></p>
+      <p class="text-light" id="no-data">There are no matchs. Try again!</p>
+      <div class="meals" id="container-meals"></div>
+      <div class="text-center mt-3" id="loading-list">
+        <div class="spinner-border spinner-purple" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts Library -->
+    <script src="https://kit.fontawesome.com/8b8f662840.js" crossorigin="anonymous"></script>
+    <!-- Scripts Library -->
+
+    <!-- My Scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- My Scripts -->
+  </body>
+</html>
